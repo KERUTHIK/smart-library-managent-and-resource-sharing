@@ -1,0 +1,962 @@
+Design and build a complete modern responsive web application called **“LibSync” — Smart Centralized College Library**.
+
+The product is a centralized digital library platform for a college/institution where multiple department libraries are connected into one system.
+
+The application has 3 user roles:
+
+1. ADMIN
+2. DEPARTMENT LIBRARIAN
+3. STUDENT / STAFF
+
+After a single sign-in, automatically route the user to the dashboard corresponding to their role. Do not make users manually select their role.
+
+The design should look like a premium modern SaaS product for an educational institution — NOT like an old-fashioned library management system.
+
+## DESIGN STYLE
+
+Use:
+
+* Modern SaaS dashboard aesthetic
+* Clean, minimal, professional UI
+* Academic + technology visual identity
+* Deep navy/indigo as the primary brand color
+* Teal/cyan as a secondary accent
+* White cards
+* Very light gray page background
+* Dark navy text
+* Subtle borders and shadows
+* Rounded corners around 10–14px
+* Clean modern typography such as Inter
+* Consistent 8px spacing system
+* Clear visual hierarchy
+* Modern line icons
+* Accessible contrast
+* Responsive layouts for desktop, tablet and mobile
+
+Avoid:
+
+* Excessive gradients
+* Excessive glassmorphism
+* Huge decorative illustrations
+* Cluttered screens
+* Old-fashioned table-heavy library interfaces
+* Excessive colors
+
+Create a reusable design system with:
+
+* Primary / secondary / success / warning / danger colors
+* Typography styles
+* Buttons
+* Inputs
+* Search bars
+* Cards
+* Tables
+* Badges
+* Tabs
+* Dropdowns
+* Modals
+* Toast notifications
+* Sidebar navigation
+* Top navigation
+* Book cards
+* Status indicators
+* Empty states
+* Loading states
+
+Use realistic sample data throughout the interface.
+
+---
+
+# BRAND
+
+Product name:
+
+**LibSync**
+
+Tagline:
+
+**“Your Campus. Your Library. One Place.”**
+
+Logo concept:
+A modern combination of a book + connected nodes/network, representing multiple department libraries connected together.
+
+---
+
+# GLOBAL APPLICATION LAYOUT
+
+For authenticated desktop screens use:
+
+Left:
+Collapsible sidebar navigation.
+
+Top:
+Top navigation bar containing:
+
+* LibSync logo
+* Global search
+* Notifications
+* Help
+* User avatar
+* User name
+* Role
+* Profile dropdown
+
+Main:
+Scrollable dashboard content.
+
+The sidebar should change according to the user's role.
+
+---
+
+# SCREEN 1 — SIGN IN
+
+Create a beautiful modern login page.
+
+Left side:
+LibSync branding and a subtle illustration representing a centralized digital library network.
+
+Right side:
+Login card.
+
+Content:
+
+“Welcome back”
+
+“Sign in to your LibSync account”
+
+Fields:
+
+* College ID / Email
+* Password
+* Show/hide password
+
+Options:
+
+* Remember me
+* Forgot password?
+
+Primary button:
+“Sign In”
+
+Below:
+“Secure access for students, staff and library administrators.”
+
+The login should feel trustworthy, modern and institutional.
+
+---
+
+# SCREEN 2 — ADMIN DASHBOARD
+
+Create a powerful analytics-focused admin dashboard.
+
+Header:
+
+“Good morning, Admin 👋”
+
+Subtitle:
+
+“Here’s what’s happening across your institution.”
+
+Top KPI cards:
+
+1. Total Books
+   24,582
+
+2. E-Books
+   8,421
+
+3. Active Users
+   6,284
+
+4. Pending Requests
+   126
+
+5. Overdue Books
+   84
+
+6. Total Departments
+   12
+
+Below the KPI cards create:
+
+## Library Circulation Trend
+
+Large line chart showing:
+
+* Books borrowed
+* Books returned
+* E-book views
+
+Time filter:
+7 Days / 30 Days / 3 Months / 1 Year
+
+## Department Activity
+
+Horizontal bar chart showing activity for:
+
+* Computer Science
+* Electronics
+* Mechanical
+* Civil
+* Mathematics
+
+## Most Borrowed Books
+
+Modern list/table containing:
+
+* Book cover
+* Title
+* Author
+* Department
+* Borrow count
+* Availability
+
+## Recent Activity
+
+Timeline showing:
+
+* New book added
+* Book request approved
+* Book transferred between departments
+* New librarian added
+* Fine payment received
+
+Admin sidebar:
+
+Dashboard
+Analytics
+Books
+E-Books
+Departments
+Librarians
+Students & Staff
+Requests
+Book Transfers
+Fines & Payments
+Reports
+Settings
+
+---
+
+# SCREEN 3 — LIBRARIAN DASHBOARD
+
+Create a department librarian dashboard.
+
+Header:
+
+“Good morning, Librarian 👋”
+
+Subtitle:
+
+“Manage your department library efficiently.”
+
+Display the librarian's department prominently, for example:
+
+“Computer Science Department Library”
+
+KPI cards:
+
+* Total Books
+* Available Books
+* Books Issued
+* Pending Requests
+* Overdue Books
+* Books in Transfer
+
+Main section:
+
+## Borrow Requests
+
+Create a modern request table.
+
+Columns:
+
+* Student
+* Book
+* Request Date
+* Availability
+* Book Location
+* Status
+* Action
+
+Actions:
+Approve
+Reject
+View Details
+
+Use colored status badges.
+
+Example:
+“Available — CSE Library”
+“Available — ECE Library”
+“Currently Issued”
+“Transfer Required”
+
+---
+
+# SCREEN 4 — CROSS-DEPARTMENT BOOK TRANSFER
+
+This is a core feature.
+
+Create a dedicated “Book Transfers” page.
+
+Show a visual transfer workflow:
+
+Student Request
+↓
+CSE Librarian
+↓
+ECE Library
+↓
+Book Transfer
+↓
+CSE Library
+↓
+Student Pickup
+
+Create a transfer detail card:
+
+REQUEST #1024
+
+Student:
+Arun Kumar
+
+Department:
+Computer Science
+
+Requested Book:
+Engineering Mechanics
+
+Current Location:
+Mechanical Department Library
+
+Requested Location:
+CSE Library
+
+Status:
+“Transfer Pending”
+
+Show timeline:
+
+✓ Request received
+✓ Request approved
+✓ Mechanical Library notified
+● Book transfer pending
+○ Received by CSE Library
+○ Ready for student pickup
+○ Issued to student
+
+Actions:
+“Contact Library”
+“Mark as Received”
+“Notify Student”
+
+---
+
+# SCREEN 5 — ADD NEW BOOK
+
+Create an elegant book upload page.
+
+Header:
+
+“Add New Book”
+
+Two options:
+
+TAB 1:
+“Upload E-Book”
+
+TAB 2:
+“Add Physical Book”
+
+For e-book upload:
+
+Large drag-and-drop area:
+
+“Drop your PDF here”
+
+“or browse files”
+
+Show:
+PDF icon
+Maximum file size
+Supported format: PDF
+
+After PDF upload, automatically show an AI metadata extraction state:
+
+“AI is analyzing your book…”
+
+Then show automatically generated metadata:
+
+Title
+Author
+ISBN
+Publisher
+Edition
+Publication Year
+Category
+Subject
+Language
+Description
+Keywords
+
+Include an “AI Generated” indicator beside automatically extracted fields.
+
+Buttons:
+“Review Metadata”
+“Edit”
+“Publish Book”
+
+The librarian must be able to manually edit all generated metadata before publishing.
+
+---
+
+# SCREEN 6 — STUDENT / STAFF DASHBOARD
+
+This should be the most friendly and visually attractive interface.
+
+Header:
+
+“Good morning, Arun 👋”
+
+Subtitle:
+
+“What would you like to learn today?”
+
+Large global search bar:
+
+“Search books, authors, subjects or topics…”
+
+Search should support natural-language queries such as:
+
+“Books for learning machine learning”
+
+Below search:
+
+Quick Actions:
+
+Explore Books
+My Books
+My Folders
+My Requests
+AI Assistant
+
+Then:
+
+## Continue Reading
+
+Book card:
+Database Management Systems
+
+Show:
+Book cover
+Progress bar
+65% completed
+Last opened: Chapter 4
+
+Button:
+“Continue Reading”
+
+## Recommended For You
+
+Horizontal book cards with:
+
+* Book cover
+* Title
+* Author
+* Rating
+* E-book / physical availability
+
+## Upcoming Due Dates
+
+Show books that are due soon.
+
+Example:
+
+Computer Networks
+Due in 3 days
+
+Button:
+“View My Books”
+
+---
+
+# SCREEN 7 — EXPLORE BOOKS
+
+Create a modern book discovery page.
+
+Header:
+
+“Explore Books”
+
+Large search bar.
+
+Natural-language search support.
+
+Example placeholder:
+
+“Search by title, author, topic or ask what you want to learn…”
+
+Left filter panel:
+
+Department
+Subject
+Category
+Author
+Publication Year
+Language
+Availability
+Book Type
+
+Book type:
+
+* E-Book
+* Physical
+* Both
+
+Main area:
+
+Grid of modern book cards.
+
+Each card should contain:
+
+* Book cover
+* Title
+* Author
+* Rating
+* Category
+* Availability badge
+* E-book badge if available
+* Physical availability
+
+Allow:
+Grid view / List view
+
+---
+
+# SCREEN 8 — BOOK DETAILS
+
+Create a detailed book information page.
+
+Large book cover on the left.
+
+Right side:
+
+Database Management Systems
+
+Author:
+Abraham Silberschatz
+
+Rating:
+4.8 ⭐
+
+Category:
+Computer Science
+
+Subject:
+Database Management
+
+Description.
+
+Availability section:
+
+E-Book:
+Available ✓
+
+Physical copies:
+
+CSE Library — 0 copies
+ECE Library — 2 copies
+Main Library — 4 copies
+
+Primary actions:
+
+“Read E-Book”
+
+“Request Physical Book”
+
+“+ Add to Folder”
+
+“Ask AI About This Book”
+
+Below:
+
+Book information
+Table of contents
+Related books
+Reviews
+
+---
+
+# SCREEN 9 — PHYSICAL BOOK REQUEST
+
+Create a clean request modal.
+
+Title:
+
+“Request Physical Book”
+
+Book:
+Database Management Systems
+
+Preferred pickup location:
+CSE Library
+
+Availability:
+
+CSE Library — unavailable
+ECE Library — 2 copies
+Main Library — 4 copies
+
+Show message:
+
+“This book is available in another department. The library will arrange an inter-department transfer.”
+
+Button:
+“Send Request”
+
+After submitting show success state:
+
+“Request Submitted ✓”
+
+“Your librarian will notify you when the book is ready for pickup.”
+
+---
+
+# SCREEN 10 — MY BOOKS
+
+Create a student book management page.
+
+Tabs:
+
+Currently Borrowed
+Requested
+Reading
+Returned
+
+Borrowed book cards should show:
+
+Book cover
+Title
+Borrowed date
+Due date
+Days remaining
+Renew button
+Return information
+
+Example:
+
+Computer Networks
+
+Borrowed:
+02 Sep 2026
+
+Due:
+12 Sep 2026
+
+“5 days remaining”
+
+Use warning colors when due date is close.
+
+---
+
+# SCREEN 11 — OVERDUE / FINES
+
+Create a clean financial section.
+
+Header:
+
+“Fines & Payments”
+
+Summary cards:
+
+Outstanding Fine
+₹125
+
+Paid This Year
+₹480
+
+Overdue Books
+2
+
+Show fine list:
+
+Book
+Due Date
+Days Overdue
+Fine
+Status
+
+Example:
+
+Operating Systems
+Due: 01 Sep 2026
+5 days overdue
+₹25
+Unpaid
+
+Button:
+“Pay Fine”
+
+Payment modal should be simple and secure-looking.
+
+---
+
+# SCREEN 12 — STUDY FOLDERS
+
+Create a personalized study workspace.
+
+Header:
+
+“My Study Folders”
+
+Button:
+“+ Create Folder”
+
+Folder cards:
+
+📁 Machine Learning
+18 Books
+
+📁 Data Science
+12 Books
+
+📁 Semester 5
+24 Books
+
+📁 Exam Preparation
+15 Books
+
+Inside a folder show:
+
+Folder name
+Description
+Books
+Notes
+AI Summary
+
+Example:
+
+Machine Learning
+
+18 Books
+
+Books:
+
+* Hands-On Machine Learning
+* Deep Learning
+* Pattern Recognition
+* Machine Learning Algorithms
+
+Buttons:
+“Add Book”
+“Add Note”
+“Generate AI Summary”
+
+---
+
+# SCREEN 13 — AI LIBRARY ASSISTANT
+
+Create a beautiful AI chat interface.
+
+Name:
+
+“LibSync AI”
+
+Subtitle:
+
+“Your intelligent study assistant”
+
+Chat interface.
+
+Example conversation:
+
+Student:
+“Explain database normalization from my books.”
+
+AI:
+“Database normalization is a process used to organize data in a relational database…”
+
+Below the answer show sources:
+
+Sources:
+Database Management Systems — Chapter 7
+Database System Concepts — Chapter 5
+
+Allow users to:
+
+* Ask questions
+* Summarize a book
+* Explain a chapter
+* Generate study notes
+* Compare concepts
+* Find relevant books
+* Ask questions about uploaded PDFs
+
+Chat input:
+
+“Ask anything about your library resources…”
+
+Include suggested prompts:
+
+“Explain this chapter”
+“Summarize this book”
+“Give me important exam topics”
+“Find books about AI”
+
+Use a floating AI button throughout the student interface.
+
+---
+
+# SCREEN 14 — NOTIFICATIONS
+
+Create a notification panel.
+
+Examples:
+
+🔔 Your physical book request was approved.
+
+🔔 Database Management Systems is due in 2 days.
+
+🔔 Your requested book has arrived at CSE Library.
+
+🔔 ₹25 fine has been generated.
+
+🔔 New books matching your interests are available.
+
+Use read/unread states.
+
+---
+
+# SCREEN 15 — PROFILE & SETTINGS
+
+Create settings page.
+
+Sections:
+
+Profile
+Account
+Notifications
+Library Preferences
+Privacy
+Security
+
+Profile should show:
+
+Name
+College ID
+Department
+Email
+Role
+
+---
+
+# RESPONSIVE DESIGN
+
+Create responsive versions for:
+
+Desktop
+Tablet
+Mobile
+
+On mobile:
+
+* Replace sidebar with bottom navigation or hamburger menu.
+* Keep search easily accessible.
+* Stack dashboard cards vertically.
+* Make book cards responsive.
+* Make tables convert into mobile-friendly cards.
+* Keep AI assistant easily accessible.
+
+---
+
+# IMPORTANT UX FLOWS
+
+Design these complete user journeys:
+
+FLOW 1:
+
+Student searches for book
+→ Opens book
+→ Sees physical copy unavailable in own department
+→ Sees copy available in another department
+→ Requests physical book
+→ Librarian approves
+→ Inter-department transfer begins
+→ Student receives notification
+→ Student picks up book
+→ Book appears in My Books
+→ Due date is displayed
+→ Student returns book
+→ Status changes to Returned
+
+FLOW 2:
+
+Librarian uploads PDF
+→ AI extracts metadata
+→ Librarian reviews metadata
+→ Librarian edits if necessary
+→ Book published
+→ Students can discover e-book
+
+FLOW 3:
+
+Student opens study folder
+→ Adds books
+→ Reads e-books
+→ Opens AI assistant
+→ Asks question
+→ AI answers using library resources
+→ AI shows book/chapter sources
+
+---
+
+# COMPONENT QUALITY
+
+Make every screen production-ready.
+
+Use:
+
+* Consistent spacing
+* Consistent button styles
+* Consistent icon sizes
+* Clear hover states
+* Clear active states
+* Clear disabled states
+* Empty states
+* Loading states
+* Success states
+* Error states
+* Confirmation dialogs
+
+Use realistic data instead of lorem ipsum.
+
+Create reusable components so the interface feels like one unified product.
+
+---
+
+# FINAL OUTPUT
+
+Generate a complete connected high-fidelity prototype for the LibSync web application.
+
+Prioritize these screens:
+
+1. Login
+2. Admin Dashboard
+3. Librarian Dashboard
+4. Student Dashboard
+5. Explore Books
+6. Book Details
+7. Physical Book Request
+8. Book Transfer
+9. Add Book + AI Metadata Extraction
+10. My Books
+11. Fines & Payments
+12. Study Folders
+13. LibSync AI Assistant
+14. Notifications
+15. Settings
+
+Make the final result feel like a **real production-ready smart centralized college library platform**, suitable for presenting to a college/institution or using as the foundation for development.
+
+The most important differentiator is the **centralized network of departmental libraries**, combined with **AI-powered book metadata extraction, intelligent search, study folders and an AI study assistant**.
